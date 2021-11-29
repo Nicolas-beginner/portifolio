@@ -1,0 +1,16 @@
+.titulo {
+    margin: 20px ;
+    @include Tipografia(titulo);
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.titulo::before{
+    content: '';
+    width: 10px;
+    height: 25px;
+    background-color: $after_before;
+    display: inline-block;
+    margin: 8px;
+}

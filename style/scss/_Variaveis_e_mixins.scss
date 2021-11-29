@@ -1,0 +1,47 @@
+// Color
+$textColor: #000000;
+$after_before: #FF1F6D;
+$backGround: #FFE739;
+
+//Size-Tamnho
+$l-device: 1200px;
+$m-device: 760px;
+$s-device: 480px;
+
+//Fontes 
+@mixin Tipografia($Tipo) {
+    @if $Tipo == texto {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        line-height: 1px;
+    }
+    @else if $Tipo == titulo {
+        font-family: 'PT Serif', serif;
+        font-size: 2em;
+        line-height: 1px;
+    }
+    @else if $Tipo == subtitulo {
+        font-family: 'DM Serif Text', serif;
+        font-size: 1.2rem;
+        line-height: 1px;
+    }
+}
+
+//Media Query
+@mixin Device($Tamanho) {
+    @if $Tamanho == l {
+        @media screen and (min-width: #{$l-device - 1}){
+            @content;
+        } 
+    } @else if $Tamanho == m {
+        @media screen and (min-width: #{$m-device - 1}) and 
+        (max-width: #{$l-device - 1}){
+            @content;
+        }
+    } @else if $Tamanho == s {
+            @media screen and (max-width: #{$m-device - 1}){
+                @content;
+            } 
+        }
+}
+
