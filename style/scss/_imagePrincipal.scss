@@ -1,0 +1,32 @@
+.Img{
+    margin: 20px 0;
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+    .texto{
+        position: absolute;
+        color: white;
+        z-index: 500;
+        word-wrap: break-all;
+        h1{
+            @include Tipografia(titulo);
+            font-size: 4em;
+            margin: 90px 40px;
+            text-shadow: 8px 4px black;
+        }
+        
+        p{
+            margin: 40px;
+            @include Tipografia(texto);
+            font-size: 4em;
+            line-height: normal;
+            text-shadow: 2px 4px black;
+        }
+    }
+    img{
+        opacity: .4;
+        height: 100vh;
+        transform: scale(1.2);
+        animation: ZoomImage 12s linear forwards;
+    }
+}

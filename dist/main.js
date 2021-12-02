@@ -1,0 +1,1 @@
+(()=>{"use strict";var n,e,t=document.querySelector(".container .texto p");e="",(n=t).innerHTML.split("").forEach((function(t,i){n.innerHTML="",setTimeout((function(){n.innerHTML=e+=t}),30*i)}))})();

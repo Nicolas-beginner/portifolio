@@ -45,3 +45,8 @@ $s-device: 480px;
         }
 }
 
+@keyframes ZoomImage{
+    to{
+        transform: initial;
+    }
+}

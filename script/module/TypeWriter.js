@@ -5,7 +5,6 @@ export default function initTypeWiriter(elemento) {
         elemento.innerHTML = ''
         setTimeout(() => {
             elemento.innerHTML = text += letra
-            console.log(elemento)
         }
             , i * 30)
     })

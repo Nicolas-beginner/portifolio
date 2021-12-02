@@ -1,3 +1,9 @@
+@keyframes ZoomImage {
+  to {
+    transform: initial;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -82,4 +88,44 @@ img {
   background-color: #FF1F6D;
   display: inline-block;
   margin: 8px;
+}
+
+.Img {
+  margin: 20px 0;
+  position: relative;
+  background-color: black;
+  overflow: hidden;
+}
+
+.Img .texto {
+  position: absolute;
+  color: white;
+  z-index: 500;
+  word-wrap: break-all;
+}
+
+.Img .texto h1 {
+  font-family: 'PT Serif', serif;
+  font-size: 2em;
+  line-height: 1px;
+  font-size: 4em;
+  margin: 90px 40px;
+  text-shadow: 8px 4px black;
+}
+
+.Img .texto p {
+  margin: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1px;
+  font-size: 4em;
+  line-height: normal;
+  text-shadow: 2px 4px black;
+}
+
+.Img img {
+  opacity: .4;
+  height: 100vh;
+  transform: scale(1.2);
+  animation: ZoomImage 12s linear forwards;
 }
