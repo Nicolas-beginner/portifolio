@@ -1,3 +1,16 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    overflow: hidden;
+    @include Device(m){
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    @include Device(s){
+        grid-template-columns: 1fr;
+    }
+}
+
 .titulo {
     margin: 20px ;
     @include Tipografia(titulo);
