@@ -13,17 +13,14 @@ $s-device: 480px;
     @if $Tipo == texto {
         font-family: 'Montserrat', sans-serif;
         font-size: 1rem;
-        line-height: 1px;
     }
     @else if $Tipo == titulo {
         font-family: 'PT Serif', serif;
         font-size: 2em;
-        line-height: 1px;
     }
     @else if $Tipo == subtitulo {
         font-family: 'DM Serif Text', serif;
         font-size: 1.2rem;
-        line-height: 1px;
     }
 }
 
