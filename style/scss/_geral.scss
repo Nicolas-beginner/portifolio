@@ -1,3 +1,11 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    @include Device(s){
+        grid-template-columns: 1fr;
+    }
+}
+
 .titulo {
     margin: 20px ;
     @include Tipografia(titulo);

@@ -1,11 +1,9 @@
 export default function initTypeWiriter(elemento) {
     let text = '';
-
-    elemento.innerHTML.split('').forEach((letra, i) => {
-        elemento.innerHTML = ''
+    elemento.innerText.split('').forEach((letra, i) => {
+        elemento.innerText = ''
         setTimeout(() => {
-            elemento.innerHTML = text += letra
-        }
-            , i * 30)
+            elemento.innerText = text += letra
+        }, i * 30)
     })
 }
