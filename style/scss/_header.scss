@@ -38,6 +38,12 @@ header{
                 background-color: rgb(0, 0, 0);
                 box-shadow: 0px 7px 0 black;
             }
+            &.ativo{
+                margin-left: 290px;
+                transition: .8s;
+                display: block;
+            }
+            //acaba a classe .menuMobileopen
         }
     }
     ul{
@@ -45,7 +51,6 @@ header{
         display: flex;
         flex-direction: row;
         align-items: center;
-
         @include Device(s){
             display: none;
             position: absolute;
@@ -63,6 +68,7 @@ header{
         
         &.ativo{
             display: block;
+            animation: ShowMenu .6s linear forwards;
         }
 
         & > #imageHeader {
@@ -76,7 +82,7 @@ header{
             margin: 10px;
             padding: 10px;
             border-bottom: 1px solid rgb(77, 77, 77);
-            display: block;
+            display: inline-block;
         }
         a{
             font-size: 1.5em;
@@ -88,7 +94,6 @@ header{
         p{
             @include Tipografia(texto);
             position: absolute;
-            display: block;
             padding: 10px;
             background-color: white;
             border: 1px solid black;
@@ -105,6 +110,10 @@ header{
                 border-left: 10px solid transparent;
                 border-right: 10px solid transparent;
             }
+
+            &.show{
+                display: block;
+            }
         }
         //"a" dentro do "p" 
         a{
@@ -114,5 +123,14 @@ header{
         }
         }  
     //final estlizaçao <ul>
+    }
+}
+
+@keyframes ShowMenu {
+    from{
+        transform: translateX(-240px);
+    }
+    to{
+        transform: initial;
     }
 }
