@@ -1,3 +1,42 @@
 .Cordiao{
-    grid-column: 1 / 13;
+    grid-column: 1 / 13;    
+    max-width: 1200px;
+    dt{
+        margin: 32px;
+        @include Tipografia(subtitulo);
+        font-size: 2em;
+        &::after{
+            content: '⮚';
+            margin-left: 16px;
+        }
+        &.ativo {
+            &::after{
+                content: '⮛';
+            }
+        }
+        cursor: pointer;
+    }
+
+    dd{
+        margin: 20px;
+        @include Tipografia(texto);
+        @include Device(s){
+            font-size: 1em;
+        }
+        font-size: 2em;
+        text-align: center;
+        opacity: 0;
+        display: none;    
+        
+        &.ativo{
+            animation: ShowCordiao .8s forwards;
+            display: block;
+        }
+    }
+}
+
+@keyframes ShowCordiao {
+    to{
+        opacity: initial;
+    }
 }

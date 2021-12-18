@@ -4,7 +4,8 @@ import initTypeWiriter from "./module/TypeWriter.js"
 import GetMostUsedLanguages from "./module/RepositoriesGet.js"
 import MenuMobileShow from "./module/OpenMenuMobile.js";
 import ShowDescriptionIconsHeader from "./module/ShowDescription.js";
-
+import ScrollTo from "./module/ScrollTo.js";
+import tolltip from "./module/TolltipWhatIs.js"
 
 const TextImage = document.querySelector(".container .texto p")
 initTypeWiriter(TextImage)
@@ -17,3 +18,9 @@ MenuShow.init()
 
 const showDescriptionIconsHeader = new ShowDescriptionIconsHeader("#imageHeader a img")
 showDescriptionIconsHeader.init()
+
+const Scrollto = new ScrollTo("a[href^='.']")
+Scrollto.init()
+
+const Tolltip = new tolltip(".Cordiao dd")
+Tolltip.init()

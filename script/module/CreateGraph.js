@@ -29,5 +29,6 @@ export default class CreateGraph {
             GraphItemDescription.setAttribute("class", "GraphDescriptionItem")
             GraphItemDescriptionContainer.appendChild(GraphItemDescription)
         })
+
     }
 }
