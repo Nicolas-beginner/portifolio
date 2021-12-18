@@ -39,7 +39,7 @@
     }
 
     .GraphDescription{
-        width: 290px;
+        width: 350px;
         height: auto;
         grid-column: 2;
         grid-row: 3;
@@ -52,15 +52,13 @@
         }
         .GraphDescriptionItem{
             margin: 8px;
-            width: 30px;
             height: 30px;
             position: relative;
-            border-radius: 50%;
             .NameGraph{
                 @include Tipografia(texto);
                 font-weight: bold;
                 position: absolute;
-                left: 45px;
+                left: 0;
                 top: 5px;
             }
         }
