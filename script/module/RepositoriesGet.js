@@ -1,5 +1,5 @@
-import CreateGraph from "./CreateGraph";
 import { token } from "./Private.json"
+import CreateGraph from "./CreateGraph";
 export default class GetMostUsedLanguages {
     constructor() {
         this.RepositoryOwer = 'Nicolas-beginner';

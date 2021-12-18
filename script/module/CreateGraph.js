@@ -4,44 +4,25 @@ export default class CreateGraph {
         this.MostUsedLanguages = MostUsedLanguages
         this.width = 45
         this.base = 1000
-        this.languagesConfigGraph;
+        this.languagesConfigGraph = {
+            HTML: "#F81818",
+            SCSS: "#CF649A",
+            JavaScript: "#FFE739",
+            CSS: "#A7DCFF",
+        };
     }
     init() {
+        const GraphItemDescriptionContainer = document.querySelector(".GraphDescription")
         Object.keys(this.MostUsedLanguages[0]).map((language) => {
             const GraphItemDiv = document.createElement("div")
             const GraphItemDescription = document.createElement("div")
-            const GraphItemDescriptionContainer = document.querySelector(".GraphDescription")
 
-            switch (language) {
-                case "SCSS":
-                    GraphItemDiv.style.backgroundColor = '#CF649A'
-                    GraphItemDescription.style.backgroundColor = "#CF649A"
-                    GraphItemDiv.style.height = this.MostUsedLanguages[0].SCSS / this.base + 'px'
-                    GraphItemDiv.style.width = this.width + 'px'
-                    GraphItemDescription.innerHTML = `<p class="NameGraph"> ${this.MostUsedLanguages[0].SCSS} Bytes escritos em ${language}</p>`
-                    break;
-                case "HTML":
-                    GraphItemDiv.style.backgroundColor = '#F81818'
-                    GraphItemDiv.style.height = this.MostUsedLanguages[0].HTML / this.base + 'px'
-                    GraphItemDiv.style.width = this.width + 'px'
-                    GraphItemDescription.style.backgroundColor = "#F81818"
-                    GraphItemDescription.innerHTML = `<p class="NameGraph"> ${this.MostUsedLanguages[0].HTML} Bytes escritos em ${language}</p>`
-                    break;
-                case "JavaScript":
-                    GraphItemDiv.style.backgroundColor = '#FFE739'
-                    GraphItemDiv.style.height = this.MostUsedLanguages[0].JavaScript / this.base + 'px'
-                    GraphItemDiv.style.width = this.width + 'px'
-                    GraphItemDescription.style.backgroundColor = "#FFE739"
-                    GraphItemDescription.innerHTML = `<p class="NameGraph"> ${this.MostUsedLanguages[0].JavaScript} Bytes escritos em ${language}</p>`
-                    break;
-                case "CSS":
-                    GraphItemDiv.style.backgroundColor = '#A7DCFF'
-                    GraphItemDiv.style.height = this.MostUsedLanguages[0].CSS / this.base + 'px'
-                    GraphItemDiv.style.width = this.width + 'px'
-                    GraphItemDescription.style.backgroundColor = "#A7DCFF"
-                    GraphItemDescription.innerHTML = `<p class="NameGraph"> ${this.MostUsedLanguages[0].CSS} Bytes escritos em ${language}</p>`
-                    break;
-            }
+            GraphItemDiv.style.backgroundColor = this.languagesConfigGraph[language]
+            GraphItemDescription.style.backgroundColor = this.languagesConfigGraph[language]
+            GraphItemDiv.style.height = this.MostUsedLanguages[0][language] / this.base + 'px'
+            GraphItemDiv.style.width = this.width + 'px'
+            GraphItemDescription.innerHTML = `<p class="NameGraph"> ${this.MostUsedLanguages[0][language]} Bytes escritos em ${language}</p>`
+
             GraphItemDiv.setAttribute("class", "GraficoItem")
             this.Container.appendChild(GraphItemDiv)
 
