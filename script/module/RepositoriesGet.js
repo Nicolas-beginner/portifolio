@@ -13,11 +13,10 @@ export default class GetMostUsedLanguages {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/vnd.github.v3+json',
-                    'Authorization': `Bearer ${token}`,
                 }
             })
             let responseRepositories = await requestRespositories.json()
-            if (!!requestRespositories.ok === false) throw new Error(requestRespositories.text())
+            if (!requestRespositories.ok) throw new Error("Desculpe algo deu errado durate a busca dos repositorioa")
             await responseRepositories.forEach(repo => this.RepositoriesNames.push(repo.name))
 
             let RequestLanguages = Promise.all(this.RepositoriesNames.map(async Name => {
@@ -28,15 +27,16 @@ export default class GetMostUsedLanguages {
                         'Authorization': `Bearer ${token}`,
                     }
                 })
-                if (!!request.ok === false) throw new Error(request.status)
+                if (!!request.ok === false) throw new Error()
                 return await request.json();
             }))
 
             let Mos = (await RequestLanguages).map(language => language)
             if (Mos.length) this.SomandoObjetos(Mos)
         }
-        catch (erro) {
-            console.log(erro)
+        catch {
+            const graph = new CreateGraph(this.MostUsedLanguages)
+            graph.alternativeTograph()
         }
     }
 

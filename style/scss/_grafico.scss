@@ -65,3 +65,13 @@
     }
 }
 
+.ContainerAlternativeToGraph{
+    p{
+        text-align: center;
+        @include Tipografia(texto);
+        font-size: 2em;
+        @include Device(s){
+            font-size: 1.2em;
+        }
+    }
+}

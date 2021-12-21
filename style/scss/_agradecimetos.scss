@@ -1,4 +1,28 @@
 .Agradecimetos{
     grid-column: 1 / -1;
-
+    .agradecimentos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        text-align: center;
+        @include Device(s){
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
+        .ContainerPeople{
+            margin: 32px;
+            p{
+                @include Tipografia(texto);
+                font-size: 2em
+            }
+            h1{
+                @include Tipografia(subtitulo);
+                font-size: 2em;
+            }
+        }
+        .Thanks{
+            @include Tipografia(texto);
+            font-size: 2em;
+        }
+    }
 }
