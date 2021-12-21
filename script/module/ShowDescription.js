@@ -1,6 +1,6 @@
-export default class ShowDescriptionIconsHeader {
-    constructor(Icones) {
-        this.icons = document.querySelectorAll(Icones)
+export default class ShowDescriptionFromElements {
+    constructor(Element) {
+        this.icons = document.querySelectorAll(Element)
         this.MouseOver = this.MouseOver.bind(this)
         this.MouseLeave = this.MouseLeave.bind(this)
     }

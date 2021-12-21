@@ -1,3 +1,76 @@
 .Certificados{
     grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 0 64px 0 ;
+
+    p{
+        @include Tipografia(texto);
+        grid-column: 1;
+        @include Device(s){
+            grid-column: 1 / -1;
+        }
+        text-align: center;
+        font-size: 2em;
+    }
+    .Slide{
+        margin: 32px;
+        height: 600px;
+        @include Device(m){
+            height: 400px;
+
+        }
+        @include Device(s){
+            height: 250px;
+
+        }
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        li{
+            margin: 32px;
+            position: absolute;
+            img{
+                width: 800px;
+                opacity: 0;
+                @include Device(m){
+                    width: 600px;
+                }
+                @include Device(s){
+                    width: 350px;
+                }
+            &.ativo{
+                transition: .8s;
+                opacity: 1;
+
+            }
+            }
+        }
+    }
+
+    .Butons{
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: space-around;
+
+        button{
+            padding: 15px;
+            @include Tipografia(texto);
+            color: white;
+            font-weight: bolder;
+            background-color: $after_before;
+            outline: none;
+            border: none;
+            cursor: pointer;
+
+            &:hover{
+                box-shadow: 2px 2px 0px black;
+                transition: .5s;
+                font-size: 1.1rem;
+            }
+        }
+    }
+
 }

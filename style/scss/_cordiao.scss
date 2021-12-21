@@ -1,5 +1,5 @@
 .Cordiao{
-    grid-column: 1 / 13;    
+    grid-column: 1 / -1;    
     max-width: 1200px;
     dt{
         margin: 32px;
@@ -18,12 +18,12 @@
     }
 
     dd{
-        margin: 20px;
+        margin: 32px;
         @include Tipografia(texto);
-        @include Device(s){
-            font-size: 1em;
-        }
         font-size: 2em;
+        @include Device(s){
+            font-size: 1.4em;
+        }
         text-align: center;
         opacity: 0;
         display: none;    
