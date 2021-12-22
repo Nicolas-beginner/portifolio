@@ -2,13 +2,17 @@
     grid-column: 1 / 13;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    @include Device(s){
+        grid-template-columns: 1fr;
+
+    }
     margin: 0 0 64px 0 ;
 
     p{
         @include Tipografia(texto);
         grid-column: 1;
         @include Device(s){
-            grid-column: 1 / - 1;
+            grid-column: 1;
             font-size: 1.4em;        
         }
         text-align: center;
@@ -18,7 +22,7 @@
         margin: 32px;
         height: 600px;
         @include Device(m){
-            height: 400px;
+            height: 500px;
 
         }
         @include Device(s){
@@ -35,7 +39,7 @@
             position: absolute;
             img{
                 width: 800px;
-                opacity: 0;
+                display: none;
                 @include Device(m){
                     width: 600px;
                 }
@@ -44,7 +48,7 @@
                 }
             &.ativo{
                 transition: .8s;
-                opacity: 1;
+                display: block;
 
             }
             }
