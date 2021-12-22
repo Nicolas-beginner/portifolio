@@ -8,7 +8,8 @@
         @include Tipografia(texto);
         grid-column: 1;
         @include Device(s){
-            grid-column: 1 / -1;
+            grid-column: 1 / - 1;
+            font-size: 1.4em;        
         }
         text-align: center;
         font-size: 2em;
@@ -56,20 +57,7 @@
         justify-content: space-around;
 
         button{
-            padding: 15px;
-            @include Tipografia(texto);
-            color: white;
-            font-weight: bolder;
-            background-color: $after_before;
-            outline: none;
-            border: none;
-            cursor: pointer;
-
-            &:hover{
-                box-shadow: 2px 2px 0px black;
-                transition: .5s;
-                font-size: 1.1rem;
-            }
+            @include Button;
         }
     }
 

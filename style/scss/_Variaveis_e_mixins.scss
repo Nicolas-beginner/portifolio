@@ -44,6 +44,23 @@ $s-device: 480px;
         }
 }
 
+@mixin  Button {
+    padding: 15px;
+    @include Tipografia(texto);
+    color: white;
+    font-weight: bolder;
+    background-color: $after_before;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    &:hover{
+        box-shadow: 2px 2px 0px black;
+        transition: .5s;
+        font-size: 1.1rem;
+    }
+}
+
 @keyframes ZoomImage{
     to{
         transform: initial;
