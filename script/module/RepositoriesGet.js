@@ -1,4 +1,3 @@
-import { token } from "./Private.json"
 import CreateGraph from "./CreateGraph";
 export default class GetMostUsedLanguages {
     constructor() {
@@ -24,7 +23,6 @@ export default class GetMostUsedLanguages {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/vnd.github.v3+json',
-                        'Authorization': `Bearer ${token}`,
                     }
                 })
                 if (!!request.ok === false) throw new Error()

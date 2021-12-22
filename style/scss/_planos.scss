@@ -7,14 +7,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    
 }
 
 .PlanoItem{
-    height: 400px;
+    height: 600px;
     width: 350px;
     box-shadow: 8px 1px 20px rgba(0, 0, 0, 0.295);
     @include Device(s){
-        height: 500px;
+        height: 650px;
         width: 250px;
     }
     margin: 32px;
@@ -61,4 +62,12 @@
 .Platinum{
     padding: 10px;
     border: 3px solid rgb(0, 183, 255);
+}
+
+.saibaMais{
+    @include Button;
+    border-radius: 4px;
+    a{
+        color: white;
+    }
 }
