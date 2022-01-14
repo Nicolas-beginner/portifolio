@@ -4,7 +4,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        text-align: center;
+        text-align: start;
         @include Device(s){
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
@@ -18,10 +18,13 @@
             h1{
                 @include Tipografia(subtitulo);
                 font-size: 2em;
+                text-align: center;
+                margin: 0 0 16px 0
             }
         }
         .Thanks{
             @include Tipografia(texto);
+            margin: 32px 0 0 32px;
             font-size: 2em;
         }
     }

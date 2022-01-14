@@ -6,8 +6,6 @@ import MenuMobileShow from "./module/OpenMenuMobile.js";
 import ShowDescriptionFromElements from "./module/ShowDescription.js";
 import ScrollTo from "./module/ScrollTo.js";
 import tolltip from "./module/TolltipWhatIs.js"
-import Slide from "./module/Slide.js";
-
 
 const TextImage = document.querySelector(".container .texto p")
 initTypeWiriter(TextImage)
@@ -26,6 +24,3 @@ Scrollto.init()
 
 const Tolltip = new tolltip(".Cordiao dd")
 Tolltip.init()
-
-const slide = new Slide(".Previous", ".Next", ".Slide li a img", ".MaxSlide")
-slide.init()

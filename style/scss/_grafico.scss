@@ -11,24 +11,26 @@
 
     .Descricao{
         @include Tipografia(texto);
-        justify-self: center;
+        justify-self: start;
         font-size: 2em;
         grid-column: 1;
         width: 550px;
-        text-align: center;
+        text-align: start;
+        margin-left: 32px;
         @include Device(m){
-        font-size: 1.4em;
+        font-size: 2em;
         width: 350px;
     } @include Device(s){
-        width: 250px;
-        font-size: 1.2em;
+        width: 350px;
+        font-size: 1.4em;
     }
     }
 
     .Grafico{
         margin: 32px 0;
-        justify-self: center;
+        justify-self: start;
         @include Device(s){
+            justify-self: center;
             grid-column: 1 / -1;
             grid-row: 3;
         }
@@ -43,10 +45,11 @@
         height: auto;
         grid-column: 2;
         grid-row: 3;
-        justify-self: center;
+        justify-self: start;
         display: flex;
         flex-direction: column;
         @include Device(s){
+            justify-self: center;
             grid-column: 1 / -1;
             grid-row: 4;
         }
