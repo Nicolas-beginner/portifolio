@@ -1,9 +1,11 @@
 // Color
 $textColor: #000000;
-$after_before: #FF1F6D;
-$backGround: #FFE739;
+$after_before: #E900FF;
+$backGround: #FFCC00;
 $have: rgb(0, 107, 0);
 $Dhave: rgb(124, 0, 0);
+
+
 
 //Size-Tamnho
 $l-device: 1200px;
@@ -21,7 +23,8 @@ $s-device: 480px;
         font-size: 2em;
     }
     @else if $Tipo == subtitulo {
-        font-family: 'DM Serif Text', serif;
+        font-family: 'PT Serif', serif;
+        font-weight: bold;
         font-size: 1.2rem;
     }
 }
