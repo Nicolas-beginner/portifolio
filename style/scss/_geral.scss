@@ -6,7 +6,7 @@
         grid-template-columns: 1fr;
     }
 }
-
+    
 .titulo {
     margin: 24px ;
     @include Tipografia(titulo);
@@ -43,7 +43,7 @@
 .Dhave{
     color: $Dhave;
     &::before{
-        content: '🞨';
+        content: 'X';
     }
 }
 

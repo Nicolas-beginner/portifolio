@@ -6,12 +6,12 @@
         @include Tipografia(subtitulo);
         font-size: 2em;
         &::after{
-            content: '⮚';
+            content: '▶';
             margin-left: 16px;
         }
         &.ativo {
             &::after{
-                content: '⮛';
+                content: '▼';
             }
         }
         cursor: pointer;

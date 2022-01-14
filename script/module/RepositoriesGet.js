@@ -1,9 +1,12 @@
 import CreateGraph from "./CreateGraph";
+import { token } from "../_privat/auth.json"
+
 export default class GetMostUsedLanguages {
     constructor() {
         this.RepositoryOwer = 'Nicolas-beginner';
         this.RepositoriesNames = [];
         this.MostUsedLanguages = [{ JavaScript: 0, CSS: 0, HTML: 0, SCSS: 0, }];
+        this.Token = token
     }
 
     async FazendoRequisições() {
@@ -12,6 +15,7 @@ export default class GetMostUsedLanguages {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/vnd.github.v3+json',
+                    'Authorization': 'Bearer' + this.Token
                 }
             })
             let responseRepositories = await requestRespositories.json()
@@ -23,6 +27,7 @@ export default class GetMostUsedLanguages {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/vnd.github.v3+json',
+                        'Authorization': 'Bearer' + this.Token
                     }
                 })
                 if (!!request.ok === false) throw new Error()
