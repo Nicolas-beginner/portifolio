@@ -69,3 +69,20 @@ $s-device: 480px;
         transform: initial;
     }
 }
+
+@mixin Loading($Width, $height) {
+    display: inline-block;
+    width: $Width;
+    height: $height;
+    background-color: transparent;
+    border-radius: 50%;
+    border: $backGround 5px solid;
+    border-top: transparent 5px solid;
+    animation: Loading infinite linear .8s;
+}
+
+@keyframes Loading {
+    to{
+        transform: rotate(360deg);
+    }
+}

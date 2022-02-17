@@ -15,6 +15,7 @@ export default class CreateGraph {
 
     init() {
         const GraphItemDescriptionContainer = document.querySelector(".GraphDescription")
+
         Object.keys(this.MostUsedLanguages[0]).map((language) => {
             const GraphItemDiv = document.createElement("div")
             const GraphItemDescription = document.createElement("div")

@@ -64,6 +64,10 @@
             @include Button;
         }
     }
+
+    .Inprogress{
+        @include Loading(10px, 10px);
+    }
     
     .CertificadoAtivo{
         display: inline-block;
@@ -73,7 +77,6 @@
         border: 1px solid black;
         border-radius: 50%;
         background-color: rgb(0, 255, 0);
-
     }
     
 }

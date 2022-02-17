@@ -4,6 +4,7 @@ import { token } from "../_privat/auth.json"
 export default class GetMostUsedLanguages {
     constructor() {
         this.RepositoryOwer = 'Nicolas-beginner';
+        this.Container = document.querySelector(`.Grafico`)
         this.RepositoriesNames = [];
         this.MostUsedLanguages = [{ JavaScript: 0, CSS: 0, HTML: 0, SCSS: 0, }];
         this.Token = token
@@ -11,6 +12,7 @@ export default class GetMostUsedLanguages {
 
     async FazendoRequisições() {
         try {
+            this.Container.classList.add("Loading")
             let requestRespositories = await fetch(`https://api.github.com/users/${this.RepositoryOwer}/repos`, {
                 method: 'GET',
                 headers: {
@@ -38,6 +40,7 @@ export default class GetMostUsedLanguages {
             if (Mos.length) this.SomandoObjetos(Mos)
         }
         catch {
+            this.Container.classList.remove("Loading")
             const graph = new CreateGraph(this.MostUsedLanguages)
             graph.alternativeTograph()
         }
@@ -60,5 +63,6 @@ export default class GetMostUsedLanguages {
         })
         const graph = new CreateGraph(this.MostUsedLanguages)
         graph.init()
+        this.Container.classList.remove("Loading")
     }
 }

@@ -8,7 +8,7 @@
     @include Device(s){
         grid-template-columns: 1fr;
     }
-
+    
     .Descricao{
         @include Tipografia(texto);
         justify-self: start;
@@ -24,9 +24,9 @@
         width: 350px;
         font-size: 1.4em;
     }
-    }
+}
 
-    .Grafico{
+.Grafico{
         margin: 32px 0;
         justify-self: start;
         @include Device(s){
@@ -34,12 +34,17 @@
             grid-column: 1 / -1;
             grid-row: 3;
         }
+        
+        &.Loading{
+            @include Loading(60px, 60px);
+        }
+
         .GraficoItem {
             display: inline-block;
             margin: 16px;
         }
     }
-
+    
     .GraphDescription{
         width: 350px;
         height: auto;
